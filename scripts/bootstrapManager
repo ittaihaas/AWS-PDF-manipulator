@@ -1,0 +1,13 @@
+#!/bin/bash
+echo @@@PERFORMING BOOTSTRAP
+yum update -y
+echo @@@installing maven
+wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+yum install -y apache-maven
+mvn -version
+echo @@@installing jdk 1.8
+yum install java-1.8.0-openjdk-devel.x86_64 -y
+wget https://s3-us-west-2.amazonaws.com/dsps192assignment1/manager.jar
+echo @@@RUNNING MANAGER!!!
+java -jar manager.jar
