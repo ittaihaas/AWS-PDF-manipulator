@@ -11,7 +11,7 @@ run the following command to create a standalone runnable jar:
 mvn clean compile assembly:single
 
 SYNOPSIS:
-java -jar localApp.jar <A> <B> <C> <D>.
+java -jar localApp.jar A B C D
 A: absolute path to input file
 B: name of output file
 C: number of tasks per worker
