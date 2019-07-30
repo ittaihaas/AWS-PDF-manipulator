@@ -12,10 +12,15 @@ mvn clean compile assembly:single
 
 SYNOPSIS:
 java -jar localApp.jar A B C D
+
 A: absolute path to input file
+
 B: name of output file
+
 C: number of tasks per worker
+
 D: optional argument - “terminate” - shut down the manager when task is completed
+
 example: java -jar my_dir/myfile.txt myconverted 5 terminate
 
 * java 1.8 or above must be installed
